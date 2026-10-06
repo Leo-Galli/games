@@ -1522,3 +1522,74 @@ canvas.board {
 }
 
 body.stage-open { overflow: hidden; }
+
+/* --- Responsive navigation ------------------------------------------
+   Keeps the header inside the viewport on small screens: the CTA moves
+   into the drawer, the links follow once they no longer fit, and the
+   spacing tightens on phones. */
+@media (max-width: 1080px) {
+  .nav-cta {
+    display: none;
+  }
+}
+
+@media (max-width: 960px) {
+  .links {
+    display: none;
+  }
+
+  .menu-btn {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-header {
+    padding: 10px 0;
+  }
+
+  .shell {
+    width: min(1120px, calc(100% - 20px));
+  }
+
+  .nav {
+    padding: 6px 6px 6px 12px;
+    gap: 10px;
+  }
+
+  .logo {
+    gap: 6px;
+    font-size: 0.85rem;
+  }
+
+  .tools {
+    gap: 6px;
+  }
+
+  .lang {
+    padding: 0 6px;
+  }
+
+  .lang select {
+    width: 4rem;
+    min-width: 44px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo {
+    font-size: 0.78rem;
+  }
+
+  .lang select {
+    width: 3.6rem;
+  }
+}
+
+@media (max-width: 340px) {
+  /* Keep the mark, drop the wordmark: the drawer carries every link. */
+  .logo {
+    font-size: 0;
+  }
+}
