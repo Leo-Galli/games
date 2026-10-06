@@ -1,0 +1,20 @@
+{
+  "name": "Games — Another Horizon",
+  "short_name": "Games",
+  "description": "A collection of clean, fast, offline-friendly mini-games: Snake, 2048, Memory, Minesweeper, Breakout, Tic-Tac-Toe, Simon and a reaction test.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#041428",
+  "theme_color": "#0ea5e9",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    }
+  ]
+}
