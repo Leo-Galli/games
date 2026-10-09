@@ -1593,3 +1593,13 @@ body.stage-open { overflow: hidden; }
     font-size: 0;
   }
 }
+
+
+/* Shared visual refinement — accessible focus, clearer surfaces, and smoother micro-interactions. */
+:where(a,button,input,select,textarea,[tabindex]):focus-visible { outline: 2px solid var(--azure, #38bdf8); outline-offset: 3px; }
+:where(.glass,.panel,.card,.stat,.calc,.viewer) { transition: border-color .22s ease, box-shadow .22s ease, background-color .22s ease, transform .22s ease; }
+:where(.glass,.panel,.card):hover { border-color: color-mix(in srgb, var(--azure, #38bdf8) 42%, var(--line, #ffffff22)); }
+:where(button,.btn,.button,.icon-btn,.filter-btn,.filter-pill) { transition: transform .18s ease, box-shadow .2s ease, filter .18s ease, background-color .2s ease; }
+:where(button,.btn,.button,.icon-btn,.filter-btn,.filter-pill):active { transform: translateY(1px) scale(.985); }
+::selection { background: color-mix(in srgb, var(--azure, #38bdf8) 38%, transparent); color: var(--text, #f3f8fc); }
+@media (prefers-reduced-motion: reduce) { :where(*, *::before, *::after) { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
