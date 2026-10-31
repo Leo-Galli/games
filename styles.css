@@ -1225,10 +1225,15 @@ footer {
   .three,
   .contact,
   .foot,
-  .foot-cols,
   .foot-end {
     grid-template-columns: 1fr;
     display: grid;
+  }
+
+  .foot-cols {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    gap: 12px 16px;
   }
 
   .stats div:nth-child(odd),
